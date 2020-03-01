@@ -1,5 +1,7 @@
 package gitMavenDemo;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -22,8 +24,10 @@ public class LoginTest
 	@Test
 	public void doLogin()
 	{
-		driver.findElement(By.id("email")).sendKeys("rajesh_nit@yahoo.co.in");
-		driver.findElement(By.id("pass")).sendKeys("Rajesh@32");
+		driver.findElement(By.id("email")).sendKeys("rajesh");
+		driver.findElement(By.id("pass")).sendKeys("Rajesh@30122");
+		driver.getTitle();
+		driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
 		
 	}
 	@AfterSuite
