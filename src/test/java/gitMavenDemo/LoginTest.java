@@ -34,6 +34,7 @@ public class LoginTest
 	public void doGoogle()
 	{
 		driver.get("http://www.google.com");
+		driver.getTitle();
 	}
 	
 	@AfterSuite
