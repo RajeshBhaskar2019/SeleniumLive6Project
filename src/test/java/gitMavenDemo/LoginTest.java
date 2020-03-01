@@ -30,6 +30,12 @@ public class LoginTest
 		driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
 		
 	}
+	@Test
+	public void doGoogle()
+	{
+		driver.get("http://www.google.com");
+	}
+	
 	@AfterSuite
 	public void tearDown()
 	{
